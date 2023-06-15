@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/BaseSpacial/1.png" type="Texture" id=1]
+[ext_resource path="res://Assets/BaseSpacial/3.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Effects/ParticulasCohete.tscn" type="PackedScene" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
+[node name="Cohete" type="Node2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+frame = 1
+playing = true
+
+[node name="ParticulasCohete" parent="." instance=ExtResource( 3 )]
+position = Vector2( 32, 0 )

@@ -1,0 +1,21 @@
+{
+	"color": "#ff48ec0d",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1686693286.json",
+	"mirror_portraits": false,
+	"name": "Chochelui",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": ""
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}

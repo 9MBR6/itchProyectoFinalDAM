@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Enemis/4/planes_03B-1.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Enemis/4/planes_03B-3.png" type="Texture" id=2]
+[ext_resource path="res://scripts/Enemies/BossEnemy.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Effects/Explosion.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Weapons/normalShoot/ShootEnemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Enemis/4/planes_03B-4.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Enemis/4/planes_03B-2.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "vertical",
+"speed": 5.0
+} ]
+
+[node name="BossEnemy" type="Area2D" groups=["enemy"]]
+position = Vector2( 305, 70 )
+scale = Vector2( 2.5, 2.5 )
+script = ExtResource( 3 )
+Explosion = ExtResource( 4 )
+Shoot = ExtResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+animation = "vertical"
+flip_v = true
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0, 3 )
+polygon = PoolVector2Array( 0, 12.3333, -4.66667, 5, -14, -7.33333, -1, -12.3333, 3.66666, -12, 14, -8, 11, -2 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -1.19209e-07, 3 )
+scale = Vector2( 1.3, 1.3 )
+
+[node name="ExplosionSpawn" type="Position2D" parent="."]
+position = Vector2( -5.99999, 7.33333 )
+
+[node name="ExplosionSpawn2" type="Position2D" parent="."]
+position = Vector2( 11.6667, 3.33333 )
+
+[node name="ExplosionSpawn3" type="Position2D" parent="."]
+position = Vector2( 6.33333, 7.66666 )
+
+[node name="ExplosionSpawn4" type="Position2D" parent="."]
+position = Vector2( -10.6667, 2.33333 )
+
+[node name="ShootTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="area_entered" from="." to="." method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]

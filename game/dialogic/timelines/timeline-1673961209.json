@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "character-1673961125.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Tengo unos cuantos encargos, ¿podrías realizar las misiones por mí?\nYo solía ser un aventurero como tú.\nPero un día me hirieron en la rodilla con una rifle laser."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1673961209.json",
+		"name": "NPC_Misiones"
+	}
+}

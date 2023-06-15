@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Shoot.ogg-d197624fb0a8b9123db7844681631fca.oggstr"
+
+[deps]
+
+source_file="res://Assets/AssetsPrueba/Assets_Spaceship/player/sounds/Shoot.ogg"
+dest_files=[ "res://.import/Shoot.ogg-d197624fb0a8b9123db7844681631fca.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

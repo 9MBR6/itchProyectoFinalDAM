@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "character-1686340031.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Recuerda presionar el botón G de vez en cuando para guardar tu partida."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1686340310.json",
+		"name": "NPC_Yago"
+	}
+}

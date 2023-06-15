@@ -1,0 +1,77 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Assets/Nave3/planes_09A-9.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Nave3/planes_09A-12.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Nave3/planes_09A-4.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Nave3/planes_09A-1.png" type="Texture" id=4]
+[ext_resource path="res://scripts/Player/PlayerShip3.gd" type="Script" id=5]
+[ext_resource path="res://scenes/Weapons/normalShoot/Shoot.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Effects/Explosion.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Nave3/planes_09A-2.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Nave3/planes_09A-3.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Nave3/planes_09A-10.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Nave3/planes_09A-11.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Nave3/planes_09A-6.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Nave3/planes_09A-5.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Nave3/planes_09A-7.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Nave3/planes_09A-8.png" type="Texture" id=15]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 1 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "horizontal",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "vertical",
+"speed": 8.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 6.0
+height = 10.4
+
+[node name="PlayerShip3" type="KinematicBody2D" groups=["player"]]
+scale = Vector2( 2.5, 2.5 )
+script = ExtResource( 5 )
+Explosion = ExtResource( 7 )
+Shoot = ExtResource( 6 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+animation = "vertical"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.4, 2.38419e-07 )
+shape = SubResource( 2 )
+
+[node name="ShootSpawn4" type="Position2D" parent="."]
+position = Vector2( 4.33333, -8.33333 )
+
+[node name="ShootSpawn3" type="Position2D" parent="."]
+position = Vector2( -4.33333, -8.33333 )
+
+[node name="ShootSpawn2" type="Position2D" parent="."]
+position = Vector2( 7.33333, -5.66667 )
+
+[node name="ShootSpawn" type="Position2D" parent="."]
+position = Vector2( -7.33333, -6 )
+
+[node name="RetardoDisparo" type="Timer" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2( 0, -3 )
+polygon = PoolVector2Array( -0.4, -9, -2, -1, -7.2, 5, -8, 6.6, -7.6, 9.4, 7.6, 9.4, 8, 6.6, 7.2, 5, 1.6, -1, 0.4, -9 )
+
+[node name="ExplosionPoint" type="Position2D" parent="."]
+position = Vector2( 0, -13 )
+
+[connection signal="timeout" from="RetardoDisparo" to="." method="_on_RetardoDisparo_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

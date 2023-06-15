@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "character-1686693588.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Cada nave en la que podamos salir al espacio posee características diferentes, ya sea que una es más rápida que otra o incluso he visto que una nave puede llegar a disparar...\n ¡¡¡¡¡4 proyectiles al mismo tiempo!!!!!"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1686693613.json",
+		"name": "NPC_Jaume"
+	}
+}

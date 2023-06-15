@@ -1,0 +1,217 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Assets/Icons/Missions/space.png" type="Texture" id=1]
+[ext_resource path="res://scripts/HUD/HUD_Missions.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Fonts/dogicapixel.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Fonts/PixelSplitter-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/Music/Buttoms/selec0.wav" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Music/Buttoms/select1.wav" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Icons/Missions/high-score.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Icons/Missions/hourglass.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Fonts/dogicapixelbold.ttf" type="DynamicFontData" id=9]
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.027451, 0.14902, 0.121569, 0.870588 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.027451, 0.14902, 0.121569, 0.870588 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.027451, 0.14902, 0.121569, 0.870588 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.0823529, 0.866667, 0.368627, 0.870588 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.027451, 0.14902, 0.121569, 0.870588 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.0823529, 0.866667, 0.368627, 0.870588 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.027451, 0.14902, 0.121569, 0.870588 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=1]
+size = 11
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 11
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 11
+outline_color = Color( 0.0823529, 0.866667, 0.368627, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 14
+font_data = ExtResource( 9 )
+
+[node name="HUD_Missions" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="Main_Panel" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -302.0
+margin_top = -168.5
+margin_right = 302.0
+margin_bottom = 168.5
+
+[node name="Mission_ItemList" type="ItemList" parent="Main_Panel"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 198.0
+margin_bottom = 333.0
+custom_colors/guide_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.0823529, 0.866667, 0.368627, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/bg = SubResource( 9 )
+items = [ "Misión 1", ExtResource( 1 ), false, "Misión 2", ExtResource( 7 ), false, "Misión 3", ExtResource( 8 ), false, "Misión 4", ExtResource( 1 ), false, "Misión 5", ExtResource( 7 ), false, "Misión 6", ExtResource( 8 ), false, "Misión 7", ExtResource( 1 ), false ]
+
+[node name="TextEdit" type="TextEdit" parent="Main_Panel"]
+margin_left = 201.0
+margin_top = 4.0
+margin_right = 600.0
+margin_bottom = 300.0
+custom_colors/font_color = Color( 0.0823529, 0.866667, 0.368627, 1 )
+custom_colors/font_color_readonly = Color( 0.0823529, 0.866667, 0.368627, 1 )
+custom_fonts/font = SubResource( 5 )
+custom_styles/read_only = SubResource( 14 )
+custom_styles/normal = SubResource( 8 )
+text = "tablon de misiones"
+readonly = true
+
+[node name="Accept_Button" type="Button" parent="Main_Panel"]
+margin_left = 201.0
+margin_top = 302.0
+margin_right = 398.0
+margin_bottom = 332.0
+custom_colors/font_color = Color( 0.0823529, 0.866667, 0.368627, 1 )
+custom_colors/font_color_hover = Color( 0.027451, 0.14902, 0.121569, 1 )
+custom_fonts/font = SubResource( 6 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/normal = SubResource( 10 )
+text = "ACEPTAR"
+
+[node name="Cancel_Button" type="Button" parent="Main_Panel"]
+margin_left = 401.0
+margin_top = 302.0
+margin_right = 598.0
+margin_bottom = 332.0
+custom_colors/font_color = Color( 0.0823529, 0.866667, 0.368627, 1 )
+custom_colors/font_color_hover = Color( 0.027451, 0.14902, 0.121569, 1 )
+custom_fonts/font = SubResource( 7 )
+custom_styles/hover = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+text = "CERRAR"
+
+[node name="Panel" type="Control" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -160.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = 158.0
+
+[node name="ColorRect" type="ColorRect" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -8.0
+margin_top = 16.0
+margin_bottom = 34.0
+color = Color( 0.027451, 0.14902, 0.121569, 0.870588 )
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = -8.0
+margin_top = 32.0
+margin_right = 57.0
+margin_bottom = 46.0
+custom_colors/font_color = Color( 0.0823529, 0.866667, 0.368627, 1 )
+custom_fonts/font = SubResource( 1 )
+
+[node name="Label2" type="Label" parent="Panel"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -8.0
+margin_top = 13.0
+margin_right = 57.0
+margin_bottom = 27.0
+custom_colors/font_color = Color( 0.0823529, 0.866667, 0.368627, 1 )
+custom_fonts/font = SubResource( 2 )
+
+[node name="Label3" type="Label" parent="Panel"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -8.0
+margin_top = -6.0
+margin_right = 57.0
+margin_bottom = 8.0
+custom_colors/font_color = Color( 0.0823529, 0.866667, 0.368627, 1 )
+custom_fonts/font = SubResource( 3 )
+
+[node name="pressBtn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -20.0
+
+[node name="mousebtn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -20.0
+
+[node name="Label" type="Label" parent="."]
+margin_left = 881.0
+margin_top = 8.0
+margin_right = 993.0
+margin_bottom = 22.0
+custom_colors/font_color = Color( 0.0823529, 0.866667, 0.368627, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "MISIONES"
+
+[connection signal="item_selected" from="Main_Panel/Mission_ItemList" to="." method="_on_Mission_ItemList_item_selected"]
+[connection signal="mouse_entered" from="Main_Panel/Accept_Button" to="." method="_on_Accept_Button_mouse_entered"]
+[connection signal="pressed" from="Main_Panel/Accept_Button" to="." method="_on_Accept_Button_pressed"]
+[connection signal="mouse_entered" from="Main_Panel/Cancel_Button" to="." method="_on_Cancel_Button_mouse_entered"]
+[connection signal="pressed" from="Main_Panel/Cancel_Button" to="." method="_on_Cancel_Button_pressed"]

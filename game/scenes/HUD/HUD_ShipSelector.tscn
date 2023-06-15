@@ -1,0 +1,146 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scripts/HUD/HUD_ShipSelector.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Fonts/dogicapixelbold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Music/Buttoms/select1.wav" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Music/Buttoms/selec0.wav" type="AudioStream" id=4]
+[ext_resource path="res://Assets/Icons/ship/icon-plane-09.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Icons/ship/icon-plane-04.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Icons/ship/icon-plane-01.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.027451, 0.14902, 0.121569, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.0823529, 0.866667, 0.368627, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="HUD_shipSelector" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Panel_Control" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -242.0
+margin_top = -96.5
+margin_right = 242.0
+margin_bottom = 96.5
+
+[node name="ColorRect" type="ColorRect" parent="Panel_Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -242.0
+margin_top = -134.5
+margin_right = 242.0
+margin_bottom = 134.5
+color = Color( 0.027451, 0.14902, 0.121569, 0.870588 )
+
+[node name="Label" type="Label" parent="Panel_Control"]
+margin_left = 194.0
+margin_top = -11.5
+margin_right = 290.0
+margin_bottom = 2.5
+custom_colors/font_color = Color( 0.0823529, 0.866667, 0.368627, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "HANGAR"
+
+[node name="Btn_Nave1" type="Button" parent="Panel_Control"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 26.0
+margin_top = -76.0
+margin_right = 132.0
+margin_bottom = -19.0
+custom_colors/font_color = Color( 0.027451, 0.14902, 0.121569, 1 )
+custom_colors/font_color_hover = Color( 0.0823529, 0.866667, 0.368627, 1 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "Nave 1"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Btn_Nave2" type="Button" parent="Panel_Control"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 194.0
+margin_top = -76.0
+margin_right = 300.0
+margin_bottom = -19.0
+custom_colors/font_color = Color( 0.027451, 0.14902, 0.121569, 1 )
+custom_colors/font_color_hover = Color( 0.0823529, 0.866667, 0.368627, 1 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "Nave 2"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Btn_Nave3" type="Button" parent="Panel_Control"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 354.0
+margin_top = -76.0
+margin_right = 460.0
+margin_bottom = -19.0
+custom_colors/font_color = Color( 0.027451, 0.14902, 0.121569, 1 )
+custom_colors/font_color_hover = Color( 0.0823529, 0.866667, 0.368627, 1 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "Nave 3"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sprite_Nave2" type="Sprite" parent="Panel_Control"]
+position = Vector2( 514, 196.5 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 6 )
+offset = Vector2( -53.3333, -8.72726 )
+
+[node name="Sprite_Nave3" type="Sprite" parent="Panel_Control"]
+position = Vector2( 674, 196.5 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 5 )
+offset = Vector2( -53.3333, -8.72726 )
+
+[node name="Sprite_Nave1" type="Sprite" parent="Panel_Control"]
+position = Vector2( 346, 196.5 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 7 )
+offset = Vector2( -53.3333, -8.72726 )
+
+[node name="audioClic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -20.0
+
+[node name="audioMouse" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -20.0
+
+[connection signal="mouse_entered" from="Panel_Control/Btn_Nave1" to="." method="_on_Btn_Nave1_mouse_entered"]
+[connection signal="pressed" from="Panel_Control/Btn_Nave1" to="." method="_on_Btn_Nave1_pressed"]
+[connection signal="mouse_entered" from="Panel_Control/Btn_Nave2" to="." method="_on_Btn_Nave2_mouse_entered"]
+[connection signal="pressed" from="Panel_Control/Btn_Nave2" to="." method="_on_Btn_Nave2_pressed"]
+[connection signal="mouse_entered" from="Panel_Control/Btn_Nave3" to="." method="_on_Btn_Nave3_mouse_entered"]
+[connection signal="pressed" from="Panel_Control/Btn_Nave3" to="." method="_on_Btn_Nave3_pressed"]

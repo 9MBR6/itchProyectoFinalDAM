@@ -1,0 +1,47 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Assets/NPCs/Laura/idle_1.png" type="Texture" id=1]
+[ext_resource path="res://scripts/NPCs/NPC/NPCLaura.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Effects/SpaceKey.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/NPCs/Laura/idle_2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/NPCs/Laura/idle_3.png" type="Texture" id=5]
+[ext_resource path="res://Assets/NPCs/Laura/idle_0.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 8.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 64.0
+
+[node name="NPCLaura" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite_npc" type="AnimatedSprite" parent="StaticBody2D"]
+scale = Vector2( 4, 4 )
+frames = SubResource( 3 )
+animation = "Idle"
+frame = 3
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+scale = Vector2( 3, 3 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="Sprite_tecla" parent="." instance=ExtResource( 3 )]
+margin_top = -51.0
+margin_bottom = -51.0
+
+[connection signal="body_entered" from="." to="." method="_on_NPC_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_NPC_body_exited"]

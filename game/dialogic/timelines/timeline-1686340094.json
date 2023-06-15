@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "character-1686340012.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Que ganas tengo de que salga el nuevo simulador de camionero espacial 2!!!"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1686340094.json",
+		"name": "NPC_Fran"
+	}
+}

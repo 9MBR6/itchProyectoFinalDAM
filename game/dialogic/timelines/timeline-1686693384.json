@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "character-1686693286.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Acabo de sacar un tornillo de la nave espacial y  no estoy muy seguro, pero ahora la nave  hace un ruido como ¡TRINKILI TRINKILI TRINKILI!, pero tranquil@ tengo bridas."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1686693384.json",
+		"name": "NPC_Joselu"
+	}
+}

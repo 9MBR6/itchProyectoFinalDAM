@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "character-1686340065.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "El otro día tuve un problema con mi ATV espacial y Chochelui aún no me lo ha devuelto..."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1686340294.json",
+		"name": "NPC_Vicky"
+	}
+}

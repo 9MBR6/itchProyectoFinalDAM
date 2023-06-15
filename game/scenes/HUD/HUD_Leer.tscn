@@ -1,0 +1,82 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Fonts/dogicapixel.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/HUD/HUD_Leer.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.027451, 0.14902, 0.121569, 0.870588 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.027451, 0.14902, 0.121569, 0.870588 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="HUD_Leer" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color( 1, 1, 1, 0.498039 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Agradecimientos" type="TextEdit" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -169.5
+margin_top = -282.0
+margin_right = 169.5
+margin_bottom = 282.0
+custom_colors/font_color = Color( 0.0823529, 0.866667, 0.368627, 1 )
+custom_colors/font_color_readonly = Color( 0.0823529, 0.866667, 0.368627, 1 )
+custom_fonts/font = SubResource( 5 )
+custom_styles/read_only = SubResource( 14 )
+custom_styles/normal = SubResource( 8 )
+text = " Desarrollador:
+
+ Manuel Bello Rial
+
+
+ Diseñadora Introducción:
+
+ Uxía Fernandez Outeiral
+
+
+ Herramientas utilizadas:
+
+ Godot
+
+ GDScript
+
+ Git
+
+ GitHub Desktop
+
+ Pixelorama
+
+ SpaceBackGround
+
+ Pixeldudesmaker
+
+
+ Paginas de Assets:
+
+ itch.io
+
+ Opengameart
+
+ Flaticon"
+readonly = true
+__meta__ = {
+"_editor_description_": ""
+}

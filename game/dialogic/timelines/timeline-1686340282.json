@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "character-1686340049.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Este juego es muy fácil, espero que no se me cuelge..."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1686340282.json",
+		"name": "NPC_Uxia"
+	}
+}

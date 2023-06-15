@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "character-1686693627.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Estoy tratando de recordar un alojamiento en el que pase muchos ratos, solo recuerdo que recuerdo que estaba en venus...."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.5
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1686693640.json",
+		"name": "NPC_Kike"
+	}
+}

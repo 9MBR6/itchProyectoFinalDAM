@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Logo/IntroGodot.webm" type="VideoStream" id=1]
+[ext_resource path="res://scripts/Intro/Intro.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Music/Walk/pencil-29272.wav" type="AudioStream" id=3]
+
+[node name="Intro" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -15.0
+autoplay = true
+
+[connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]

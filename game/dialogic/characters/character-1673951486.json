@@ -1,0 +1,21 @@
+{
+	"color": "#ffff0000",
+	"description": "es el dialogo de prueba.",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1673951486.json",
+	"mirror_portraits": false,
+	"name": "Jefe del hangar",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": ""
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}

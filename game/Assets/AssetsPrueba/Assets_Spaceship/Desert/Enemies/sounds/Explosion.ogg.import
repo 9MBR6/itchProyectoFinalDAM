@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Explosion.ogg-5caad484284f7a05c0fc625e28479cd1.oggstr"
+
+[deps]
+
+source_file="res://Assets/AssetsPrueba/Assets_Spaceship/Desert/Enemies/sounds/Explosion.ogg"
+dest_files=[ "res://.import/Explosion.ogg-5caad484284f7a05c0fc625e28479cd1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

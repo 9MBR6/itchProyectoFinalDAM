@@ -1,0 +1,155 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://scenes/Player/PlayerShip1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Enemies/BaseEnemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/AssetsPrueba/Assets_Spaceship/River/PNG/background.png" type="Texture" id=3]
+[ext_resource path="res://Assets/AssetsPrueba/Assets_Spaceship/Desert/backgrounds/clouds.png" type="Texture" id=4]
+[ext_resource path="res://scripts/Space/SpaceSceneDemo.gd" type="Script" id=5]
+[ext_resource path="res://scenes/HUD/HUD_Espacio.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/HUD/HUD_GameOver.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Enemies/EnemyFast.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/HUD/HUD_MissionsSpace.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/Player/PlayerShip2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/Player/PlayerShip3.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/Enemies/EnemyZigZag.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/Enemies/BossEnemy.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/Enemies/Boss1Enemy.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Assets/Music/Batalla/DynamicFight_2.mp3" type="AudioStream" id=15]
+[ext_resource path="res://Assets/Music/Batalla/RhytmicBounceA.mp3" type="AudioStream" id=16]
+[ext_resource path="res://Assets/Music/Batalla/DynamicFight_3.mp3" type="AudioStream" id=17]
+[ext_resource path="res://Assets/Background/Space_Background.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Background/Stars_Background.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Background/PlanetBackground.png" type="Texture" id=20]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 295.733, 0, 0, 0, 0, 0, 729.315, 0 )
+}
+
+[node name="SpaceSceneDemo" type="Node2D" groups=["level"]]
+script = ExtResource( 5 )
+Enemy = ExtResource( 2 )
+EnemyFast = ExtResource( 8 )
+EnemyZigZag = ExtResource( 12 )
+BoosEnemy = ExtResource( 13 )
+Boos1Enemy = ExtResource( 14 )
+
+[node name="PlayerShip1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 512, 352 )
+
+[node name="PlayerShip2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 512, 352 )
+
+[node name="PlayerShip3" parent="." instance=ExtResource( 11 )]
+position = Vector2( 512, 352 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512, 304 )
+
+[node name="background" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="background"]
+motion_mirroring = Vector2( 0, 600 )
+
+[node name="Sprite" type="Sprite" parent="background/ParallaxLayer"]
+visible = false
+position = Vector2( 512, 304 )
+scale = Vector2( 2, 1.9 )
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="background/ParallaxLayer"]
+position = Vector2( 255, 0 )
+scale = Vector2( 2.57, 3.02 )
+texture = ExtResource( 18 )
+centered = false
+
+[node name="nube1" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="nube1"]
+motion_mirroring = Vector2( 0, 600 )
+
+[node name="Sprite" type="Sprite" parent="nube1/ParallaxLayer"]
+visible = false
+modulate = Color( 1, 1, 1, 0.313726 )
+position = Vector2( 512, 96 )
+scale = Vector2( 2, 1.9 )
+texture = ExtResource( 4 )
+
+[node name="Sprite2" type="Sprite" parent="nube1/ParallaxLayer"]
+position = Vector2( 298, 2 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 20 )
+centered = false
+
+[node name="nube2" type="ParallaxBackground" parent="."]
+offset = Vector2( 0, 128 )
+transform = Transform2D( 1, 0, 0, 1, 0, 128 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="nube2"]
+motion_mirroring = Vector2( 0, 600 )
+
+[node name="Sprite" type="Sprite" parent="nube2/ParallaxLayer"]
+visible = false
+modulate = Color( 1, 1, 1, 0.470588 )
+position = Vector2( 512, 224 )
+scale = Vector2( 2, 1.9 )
+texture = ExtResource( 4 )
+
+[node name="Sprite2" type="Sprite" parent="nube2/ParallaxLayer"]
+position = Vector2( 254, -128 )
+scale = Vector2( 2.575, 3.02 )
+texture = ExtResource( 19 )
+centered = false
+
+[node name="EnemyTimer" type="Timer" parent="."]
+
+[node name="EnemyFastTimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="EnemyZigZagTimer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="BoosTimer" type="Timer" parent="."]
+wait_time = 30.0
+
+[node name="Boos1Timer" type="Timer" parent="."]
+wait_time = 50.0
+
+[node name="EnemyPath" type="Path2D" parent="."]
+position = Vector2( -36.4803, 0 )
+scale = Vector2( 1.07015, 1 )
+curve = SubResource( 1 )
+
+[node name="EnemySpawn" type="PathFollow2D" parent="EnemyPath"]
+position = Vector2( 295.733, 0 )
+
+[node name="HUD_Espacio" parent="." instance=ExtResource( 6 )]
+
+[node name="HUD_GameOver" parent="." instance=ExtResource( 7 )]
+
+[node name="HUD_MissionsSpace" parent="." instance=ExtResource( 9 )]
+
+[node name="TimerMisiones" type="Timer" parent="."]
+autostart = true
+
+[node name="sound1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = -25.0
+
+[node name="sound2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+volume_db = -25.0
+
+[node name="sound3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+volume_db = -25.0
+
+[connection signal="gameOver" from="PlayerShip1" to="." method="_on_PlayerShip1_gameOver"]
+[connection signal="gameOver" from="PlayerShip2" to="." method="_on_PlayerShip2_gameOver"]
+[connection signal="gameOver" from="PlayerShip3" to="." method="_on_PlayerShip3_gameOver"]
+[connection signal="timeout" from="EnemyTimer" to="." method="_on_EnemyTimer_timeout"]
+[connection signal="timeout" from="EnemyFastTimer" to="." method="_on_EnemyFastTimer_timeout"]
+[connection signal="timeout" from="EnemyZigZagTimer" to="." method="_on_EnemyZigZagTimer_timeout"]
+[connection signal="timeout" from="BoosTimer" to="." method="_on_BoosTimer_timeout"]
+[connection signal="timeout" from="Boos1Timer" to="." method="_on_Boos1Timer_timeout"]
+[connection signal="timeout" from="TimerMisiones" to="." method="_on_TimerMisiones_timeout"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/RhytmicBounceA.mp3-7d84a0fb3b63938467d11c742b8b3a99.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Batalla/RhytmicBounceA.mp3"
+dest_files=[ "res://.import/RhytmicBounceA.mp3-7d84a0fb3b63938467d11c742b8b3a99.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

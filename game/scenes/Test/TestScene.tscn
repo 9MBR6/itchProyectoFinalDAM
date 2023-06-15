@@ -1,0 +1,116 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Spacial_Base/BaseEspacial.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/NPCs/NPC.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/NPCs/NPCMisiones.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/NPCs/NPCComerciante.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/HUD/HUD_Base.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/HUD/HUD_Missions.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/HUD/HUD_Shop.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/HUD/HUD_ShipSelector.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/NPCs/NPCMecanico.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/Music/Background/Base/DubStepDropBoom.mp3" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Music/Background/Base/DeepSpaceB.mp3" type="AudioStream" id=12]
+[ext_resource path="res://scripts/Space/TestScene.gd" type="Script" id=13]
+[ext_resource path="res://scenes/NPCs/NPCJose.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/NPCs/NPCVicky.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/NPCs/NPCFran.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/NPCs/NPCUxia.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/NPCs/NPCYago.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/NPCs/NPCVitor.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/NPCs/NPCLarsa.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/NPCs/NPCJaume.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/NPCs/NPCLaura.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/NPCs/NPCKike.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/NPCs/NPCJoselu.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scenes/NPCs/NPCSofia.tscn" type="PackedScene" id=25]
+
+[node name="SceneBase" type="Node2D"]
+script = ExtResource( 13 )
+
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
+
+[node name="NPCPruebas" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1833, 61 )
+
+[node name="NPCComerciante" parent="." instance=ExtResource( 4 )]
+position = Vector2( -1352, 386 )
+
+[node name="NPCMisiones" parent="." instance=ExtResource( 5 )]
+position = Vector2( -1680, -373 )
+
+[node name="NPCUxia" parent="." instance=ExtResource( 17 )]
+position = Vector2( -1719, -855 )
+
+[node name="NPCVicky" parent="." instance=ExtResource( 15 )]
+position = Vector2( -1864, -776 )
+
+[node name="NPCYago" parent="." instance=ExtResource( 18 )]
+position = Vector2( -2052, -313 )
+
+[node name="NPCVitor" parent="." instance=ExtResource( 19 )]
+position = Vector2( -966, 530 )
+
+[node name="NPCJoselu" parent="." instance=ExtResource( 24 )]
+position = Vector2( -2505, -61 )
+
+[node name="NPCFran" parent="." instance=ExtResource( 16 )]
+position = Vector2( -1292, -496 )
+
+[node name="NPCMecanico" parent="." instance=ExtResource( 10 )]
+position = Vector2( -1600, 893 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2308, 62 )
+
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+position = Vector2( 0, -48 )
+current = true
+zoom = Vector2( 1.3, 1.3 )
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 3.0
+drag_margin_left = 0.1
+drag_margin_top = 0.15
+drag_margin_right = 0.1
+drag_margin_bottom = 0.15
+editor_draw_drag_margin = true
+
+[node name="NPCKike" parent="." instance=ExtResource( 23 )]
+position = Vector2( -1197, 835 )
+
+[node name="NPCJose" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1351, -265 )
+
+[node name="NPCYago2" parent="." instance=ExtResource( 25 )]
+position = Vector2( -827, -484 )
+rotation = 0.021084
+
+[node name="NPCJaume" parent="." instance=ExtResource( 21 )]
+position = Vector2( -2046, 377 )
+
+[node name="NPCLaura" parent="." instance=ExtResource( 22 )]
+position = Vector2( -1884, 898 )
+
+[node name="NPCLarsa" parent="." instance=ExtResource( 20 )]
+position = Vector2( -832, 691 )
+
+[node name="HUD_Base" parent="." instance=ExtResource( 6 )]
+
+[node name="HUD_Missions" parent="." instance=ExtResource( 7 )]
+
+[node name="HUD_Shop" parent="." instance=ExtResource( 8 )]
+
+[node name="HUD_shipSelector" parent="." instance=ExtResource( 9 )]
+
+[node name="Musica2" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 11 )
+volume_db = -20.0
+
+[node name="Musica1" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 12 )
+volume_db = -20.0
