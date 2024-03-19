@@ -1,4 +1,4 @@
-# Descripción del Proceso de Desarrollo de Videojuego
+# Descripción
 
 El proceso de desarrollo de mi videojuego comenzó con la elección de herramientas de código abierto y gratuitas para llevar a cabo mi visión. 
 
