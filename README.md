@@ -21,16 +21,16 @@ https://datogz.itch.io/proyecto-final-dam
 
 ## Imágenes
 
-![WEB]()
+![WEB](https://github.com/9MBR6/itchProyectoFinalDAM/blob/main/recursos/0.png?raw=true)
 
-![1]()
+![1](https://github.com/9MBR6/itchProyectoFinalDAM/blob/main/recursos/1.png?raw=true)
 
-![2]()
+![2](https://github.com/9MBR6/itchProyectoFinalDAM/blob/main/recursos/2.png?raw=true)
 
-![3]()
+![3](https://github.com/9MBR6/itchProyectoFinalDAM/blob/main/recursos/3.png?raw=true)
 
-![4]()
+![4](https://github.com/9MBR6/itchProyectoFinalDAM/blob/main/recursos/4.png?raw=true)
 
-![5]()
+![5](https://github.com/9MBR6/itchProyectoFinalDAM/blob/main/recursos/5.png?raw=true)
 
-![6]()
+![6](https://github.com/9MBR6/itchProyectoFinalDAM/blob/main/recursos/6.png?raw=true)
