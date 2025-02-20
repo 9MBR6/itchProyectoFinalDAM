@@ -15,3 +15,22 @@ Además, para los recursos adicionales como música y efectos de sonido, recurr�
 
 ## Conclusión
 Este proyecto fue parte de mi formación en el **Ciclo Formativo de Grado Superior DAM** (Desarrollo de Aplicaciones Multiplataforma), y aunque enfrenté desafíos y aprendí mucho a lo largo del camino, el resultado final fue un videojuego del cual estoy muy orgulloso por qué pese a no tener muchos conocimientos en el mundo de la programación pude completar con muy buenos resultados mi primer proyecto como desarrollador.
+
+## Enlace 
+https://datogz.itch.io/proyecto-final-dam
+
+## Imágenes
+
+![WEB]()
+
+![1]()
+
+![2]()
+
+![3]()
+
+![4]()
+
+![5]()
+
+![6]()
